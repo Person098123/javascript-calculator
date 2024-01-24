@@ -1,32 +1,34 @@
 
 
 function equalTo(){
+  
  let userInput= prompt("Which function would you like?");
- if(userInput==="add"){
-   add();
-   break;
- }
- else if(userInput==="subtract"){
-   subtract();
-   break;
- }
- else if(userInput==="multiply"){
-   multiply();
-   break;
- }
- else if(userInput==="division"){
-   division();
-   break;
- }
- else {
-  document.write("Please try again idiot");
+ switch(userInput){
+ case "add":
+  add();
   break;
- }
+
+case "subtract":
+  subtract();
+  break;
+
+case "multiply":
+  multiply();
+  break;
+
+case "division":
+  division();
+  break;
+
+default:
+  document.write("error: try doing add, substract, multiply, or division");
+  
+}
 }
 
 function add(){
- let input1= prompt("Whats the first input");
- let input2= prompt("Whats the second input");
+ let input1= parseInt(prompt("Whats the first input"));
+ let input2= parseInt(prompt("Whats the second input"));
  let output=0;
 
  output= (input1+input2);
@@ -34,8 +36,8 @@ function add(){
 }
 
 function subtract(){
-    let input1= prompt("Whats the first input");
-    let input2=prompt("Whats the second input");
+  let input1= parseInt(prompt("Whats the first input"));
+  let input2= parseInt(prompt("Whats the second input"));
     let output=0;
 
     output= (input1-input2);
@@ -44,8 +46,8 @@ function subtract(){
 }
 
 function multiply(){
-    let input1= prompt("Whats the first input");
-    let input2=prompt("Whats the second input");
+  let input1= parseInt(prompt("Whats the first input"));
+  let input2= parseInt(prompt("Whats the second input"));
     let output=0;
 
     output= (input1*input2);
@@ -53,8 +55,8 @@ function multiply(){
 }
 
 function division(){
-    let input1= prompt("Whats the first input");
-    let input2=prompt("Whats the second input");
+  let input1= parseInt(prompt("Whats the first input"));
+  let input2= parseInt(prompt("Whats the second input"));
     let output=0;
 
     output= (input1/input2);
